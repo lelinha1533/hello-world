@@ -1,4 +1,5 @@
 Share cho anh em KMS de active Windows Server 2016
 slmgr /skms active.orientsoftware.asia
 slmgr /ato
+https://conglinh.com/2903-tai-lieu-on-thi-chung-chi-mcsa-2012-2016-moi-nhat.html
 ==================================================
