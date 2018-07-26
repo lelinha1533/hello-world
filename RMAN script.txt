@@ -1,0 +1,7 @@
+RMAN script
+Full backup norachivelog
+run {
+shutdown immediate
+startup mount
+backup database
+}
