@@ -1,0 +1,4 @@
+Share cho anh em KMS de active Windows Server 2016
+slmgr /skms active.orientsoftware.asia
+slmgr /ato
+==================================================
