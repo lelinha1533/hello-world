@@ -1,0 +1,11 @@
+login root
+#nmcli d
+#nmtui:
+	Edit a connection > select network interface (ens33)
+		change IPv4: Manual
+		Select "Show"
+			Fill: Address, Gateway, DNS
+		Tick: Require IPv4 addressing
+		IPv6: Automatically connect
+			Back > Back > Quit
+#systemctl restart network
