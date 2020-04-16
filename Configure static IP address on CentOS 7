@@ -1,4 +1,9 @@
-login root
+Configure static IP address on CentOS 7
+
+Requirements: login root
+
+Method 1:
+
 #nmcli d
 #nmtui:
 	Edit a connection > select network interface (ens33)
@@ -9,3 +14,22 @@ login root
 		IPv6: Automatically connect
 			Back > Back > Quit
 #systemctl restart network
+
+Method 2:
+nmcli d
+vi /etc/sysconfig/network-scripts/ifcfg-ens33
+
+change INSERT mode and edit:
+	ONBOOT=yes
+	BOOTPROTO=static
+Insert
+	IPADDR=192.168.0.123
+	NETMASK=255.255.255.0
+	GATEWAY=192.168.0.1
+	DNS1=8.8.8.8
+	DNS2=8.8.4.4
+exit vi (:wq)
+
+systemctl restart
+
+Test IP again: ip addr	
